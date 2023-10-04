@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x86</Platforms>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Ressources\NetLamerLogo.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Ressources\NetLamerLogo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Cake.Powershell" Version="3.0.0" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="NetLamerLogo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="NetLamerLogo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
