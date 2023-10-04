@@ -232,7 +232,6 @@ namespace NetLamer
                 else
                 {
                     removePolicy(process.ProcessName);
-                    Thread.Sleep(1000);
                 }
                 refreshProcessList();
                 return true;
@@ -263,6 +262,7 @@ namespace NetLamer
                    .Append(@" -Confirm:$false'")
                    .ToString();
             string output = PowerShellHandler.Command(scriptDeleteText);
+            Thread.Sleep(1000);
         }
 
         private void updatePolicyValues(Process? process, bool setByProgram = false)
